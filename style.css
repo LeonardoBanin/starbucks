@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+ /* Reset (Basico)
+O box-sizing com o mesmo valor border-box faz com que o navegador não calcule a dimençao de um elemento somando as bordas e margens com alturas */
+               
+/* Menu */
+*{
+    
+    margin: 0;
+  
+    padding: 0;
+    
+    box-sizing: border-box;
+   
+    font-family: 'Poppins', sans-serif;
+}
+
+    
+
+main{
+    /* Posiciona relative utiliza seu propio canto como referencia */
+    position: relative;
+    /* Define a largura */
+    width: 100%;
+    /* Utilizada para definir a altura minima de um determinado elemento */
+    min-height: 100vh;
+    /* O padding define uma distancia  entre o conteudo de um elemnto e suas bordas*/
+    padding: 100px;
+    /* O display flex fiunciona como um fles container, a partit dai podemos manipular todos os elementos "filhos" deste flex com novas propiedades */
+    display: flex;
+    /* O primeiro elemento fica no começo o ultimo vai para o finsl e o resto é colocado proporcinalmente entre eles */
+    justify-content: space-between;
+    /* Garantem ao flex itens  dentro de um elemento com display flex vão centralizar */
+    align-items: center;
+    /* Define a cor do fundo */
+    background-color: #fff;
+}
+
+header{
+   /* posiciona qualquer objeto de acordo com o objeto pai */
+    position: absolute;
+    /* posiciona o elemento a partir do topo da pagina */
+    top: 0;
+    /* posiciona o elemento a partir do lado esquerdo da pagina */
+    left: 0;  
+    /* Define a largura do objeto */
+    width: 100%;
+    /*  define o espaçamento do objeto, no qual terão os 4 lados iguais ( o primeiro define superior e inferior, e o segundo define as laterais) */
+    padding: 20px 100px;
+    /* O display flex fiunciona como um fles container, a partit dai podemos manipular todos os elementos "filhos" deste flex com novas propiedades */
+    display: flex;
+    /* O primeiro elemento fica no começo o ultimo vai para o finsl e o resto é colocado proporcinalmente entre eles */
+    justify-content: space-between;
+    /* garante que os flex items dentro de um elemento com display flex vão ficar centralizados */
+    align-items: center;
+}
+
+header .logo{
+    /* Posiciona relative utiliza seu propio canto para referenciar sua posição */
+    position: relative;
+   /* define a maxima largura de um elemento */
+    max-width: 80px;
+}
+
+header .logo:hover{
+   /* o efeito obtido com aplicação desta funçao de filtragen é o de inverter as cores da imagem */
+    filter: invert(0.1);
+}
+
+header ul{
+    /* Posiciona relative utiliza seu propio canto para referenciar sua posição */
+    position: relative;
+    /* O display flex fiunciona como um fles container, a partit dai podemos manipular todos os elementos "filhos" deste flex com novas propiedades */
+    display: flex;
+}
+
+header ul li{
+    /* Remove o estilo da lista */
+    list-style: none;
+}
+
+header ul li a{
+    /* Garante que o objeto seja renderizado em linha dentro do bloco*/
+    display: inline-block;
+    /* define a cor */
+    color: #333;
+    /* Define o tamanho da fonte */
+    font-size: 20px;
+    /* Especifica o peso da fonte ou a intecidade da mesma */
+    font-weight: 400;
+    /* para informar o espaçamento a esquerda */
+    margin-left: 40px;
+    /* Remove as decorações do texto, como underline */
+    text-decoration: none;
+    /* define o espaçamento do objeto, no qual terão os 4 lados iguais ( o primeiro define superior e inferior, e o segundo define as laterais) */
+    padding: 5px;
+}
+
+header ul li a:hover{
+  /* define a cor do fundo */
+    background-color: #017143;
+    /* define a cor */
+    color: #fff;
+    /* arredonda as bordas do objeto */
+    border-radius: 10px;
+}
+/* ____________________________ */
+
+ /* Conteudo */
+.conteudo {
+   /* Posiciona relative utiliza seu propio canto para referenciar sua posição */
+    position: relative;
+    /* Define a largura do elemento */
+    width:100%;
+    /* Torna flexivel o container do texto (.conteudo) */
+    display: flex;
+    /* O primeiro item é colocado no começo o ultimo é colocado no final e os demais são colocados uniformemente entre eles */
+    justify-content: space-between;
+    /* Faz com que os flexs-items dentro de um display-flex vão centralizar */
+    align-items: center;
+}
+
+.conteudo .textoPrincipal {
+   /* Posiciona relative utiliza seu propio canto para referenciar a sua posição */
+    position:relative;
+    /* Limita a área do texto principal */
+   max-width:600px;
+}
+
+.conteudo .textoPrincipal h2{
+    
+    color: #333;
+    /* 1em = 1vez tamanho da fonte do elemento (16px * 2.5) = 40px  */
+    font-size: 2.5em;
+    /* Espaçamento vertical fonte (40px * 1.5) = 40px */
+    line-height: 1.5em;
+    /* Especifica o peso da fonte ou a intecidade da mesma */
+    font-weight: 500;
+}
+
+.conteudo .textoPrincipal h2 span{
+    
+    color:#017143;
+    /* 1em = 1vez tamanho da fonte do elemento (16px * 2.5) = 40px  */
+    font-size: 1.2em;
+     /* Especifica o peso da fonte ou a intecidade da mesma */
+    font-weight: 900;
+}
+
+.conteudo .textoPrincipal p {
+  /* Cor */
+    color:#333
+}
+
+.conteudo .textoPrincipal a {
+    /* Podemos organizar os elementos lado a lado e definirmos as propiedades de largura e altura */
+    display:inline-block;
+    /* afastamento de paragrafo acima */
+    margin-top: 20px;
+    /* Os quatro lados do elemnro terão o mesmo valor (o primeiro sera para superior e inferior, o segundo será para direita e esquerda)   */
+    padding: 8px 20px;
+    /* Define o fundo */
+    background: #017143;
+    /* define a cor */
+    color:#fff;
+    /* arredonda as bordas */
+    border-radius:40px;
+    /* Especifica o peso da fonte ou a intecidade da mesma */
+    font-weight: 500;
+    /* espaçamento entre letras */
+    letter-spacing: 1px;
+    /* nenhuma linha é desenhada e qualquer decoração existentes é removida */
+    text-decoration: none;
+}
+
+.conteudo .textoPrincipal a:hover{
+    /* Define o fundo */
+    background: #333;
+       /* Define o fundo */
+    color: #fff;
+    /* arrendonda as bordas */
+    border-radius: 40px;
+    /* Especifica o peso da fonte ou a intecidade da mesma */
+    font-weight: 500;
+    /* espaçamento entre as letras */
+    letter-spacing: 1px;
+    /* nenhuma linha é desenhada e qualquer decoração existentes é removida */
+    text-decoration: none;
+}
+
+.conteudo .imgBox{
+   
+    width: 600px;
+    
+    display: flex;
+    
+    justify-content: flex-end;
+   
+    padding-right: 50px;
+
+    margin-top: 50px;
+}
+
+.conteudo .imgBox img{
+    
+    max-width: 340px;
+}
+
+/* Sorvete a direita */
+.sorvetes{
+   
+    position: absolute;
+   
+    left: 50%;
+   
+    bottom: 20px;
+
+    transform: translateX(-50%);
+ 
+    display: flex;
+}
+
+.sorvetes li{
+  
+    list-style: none;
+  
+    display: inline-block;
+    
+    margin:  0 20px;
+    
+    cursor: pointer;
+    
+    transition: 0.5s;
+}
+
+/* Sorvete pequeno */
+.sorvetes li:hover{
+   
+    transform: translateY(-15px);
+}
+
+.sorvetes li img{
+  
+    max-width: 60px;
+}
+
+.sociais{
+    
+    position: absolute;
+
+    top: 50%;
+ 
+    right: -80px;
+   
+    transform: translateY(-50%);
+   
+    display: flex;
+   
+    justify-content: center;
+   
+    flex-direction: column;
+   
+    align-items: center;
+}
+
+.sociais li{
+
+    list-style: none;
+}
+
+.sociais li a{
+   
+    display: inline-block;
+
+    margin: 5px 0;
+  
+    transform: scale(0.6);
+  
+    filter: invert(1);
+
+}
+
+.sociais li a:hover{
+  
+    color: #14531d;
+   
+    filter: invert(0);
+}
+
+.circulo{
+   
+    position: absolute;
+  
+    top: 0;
+  
+    left: 0;
+    
+    width: 100%;
+  
+    height: 100%;
+   
+    background: #017143;
+   
+    clip-path: circle(600px at right 800px);
+}
+
+
+
